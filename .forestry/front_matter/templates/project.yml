@@ -1,0 +1,32 @@
+---
+label: Project
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  hidden: false
+  label: categories
+  name: categories
+  default: projects
+  config:
+    required: true
+- type: text
+  name: title
+  label: title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: date
+  config:
+    date_format: "/DD/MM/YYYY"
+    required: true
+- type: text
+  name: layout
+  label: layout
+  default: post
+  config:
+    required: true
+  hidden: false
+pages:
+- _posts/2018-08-03-politicians.md
