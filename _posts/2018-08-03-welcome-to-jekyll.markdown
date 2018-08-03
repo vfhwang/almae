@@ -2,7 +2,7 @@
 layout: post
 title: Welcome to Jekyll!
 date: 2018-08-03 16:17:47 +0000
-categories: jekyll update
+categories: projects
 
 ---
 ![](/uploads/screenshot-parliament-uk-committee-dev.herokuapp.com-2018.08.03-13-40-30.png)
