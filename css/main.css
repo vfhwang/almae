@@ -85,7 +85,13 @@ h1, h2{
 	font-weight: bold;
 	color: #818181;
 	letter-spacing: -.1vw;
-	line-height: 0.8;
+	line-height: 0.9;
+}
+
+h2{
+	color: #0E5ADD;
+	padding-right:200px;
+	font-size: 6vw;
 }
 
 .stamparea{
@@ -101,7 +107,7 @@ h1, h2{
 .mainbody{
 	width:90vw;
 	height:100vh;
-	margin:90vh 5vw;
+	margin:80vh 5vw;
 
 }
 
