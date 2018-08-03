@@ -28,3 +28,5 @@ fields:
   config:
     required: true
   hidden: false
+pages:
+- _posts/politicians.md
