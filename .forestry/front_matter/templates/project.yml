@@ -1,0 +1,10 @@
+---
+label: Project
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  hidden: false
+  label: categories
+  name: categories
+  default: projects
