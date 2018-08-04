@@ -76,22 +76,21 @@ div {
 
 body{
 	font-family:'Akzidenz', Arial;
-	background:#D2D2C9;
-
+	/* background:#D2D2C9; */
+	background:#EFEFEF;
 }
 
 h1, h2{
-	font-size:4vw;
+	font-size:6vw;
 	font-weight: bold;
-	color: #818181;
+	color: #CFCFCF;
 	letter-spacing: -.1vw;
 	line-height: 0.9;
 }
 
 h2{
-	color: #0E5ADD;
-	padding-right:200px;
-	font-size: 6vw;
+	/* padding-right:200px; */
+	font-size: 28.5vw;
 }
 
 .stamparea{
@@ -107,22 +106,33 @@ h2{
 .mainbody{
 	width:90vw;
 	height:100vh;
-	margin:80vh 5vw;
+	margin:92vh 5vw;
 
 }
 
 .projectitem{
-	background: rgba(255,255,255,1);
-	padding:20px 5vw;
+	/* background: rgba(255,255,255,1); */
+	background:#CFCFCF;
+	/* padding:20px 5vw; */
+	margin:0 0 40px 0;
 }
 
 
-img{
+img.stamp{
 	position:fixed;
 	z-index:-1;
 	width:50vw;
 }
 
+img.post{
+	width:33%;
+}
+
 header{
 	margin:5vw;
+}
+
+header p{
+	color:#0E5ADD;
+	font-size:2.5vw;
 }

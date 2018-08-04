@@ -19,16 +19,35 @@
     <body>
 
         <div class="stamparea">
-            <header><h1>Alice Mae Mayall</h1></header>
+            <header>
+                <h1>Alice Mae Mayall</h1>
+                <p>Stamps, illustrations and animations</p>
+            </header>
+
         </div>
 
 <div class="mainbody">
-        <h2>I make stamps, illustrations and animations.</h2>
+        <h2>Work</h2>
 
         	  {% for post in site.categories.projects %}
                 <div class="projectitem">
+                    <h3>{{post.title}}</h3>
+                    {% assign foundImage = 0 %}
+{% assign images = post.content | split:"<img " %}
+{% assign foundImage = 0 %}
+{% assign images = post.content | split:"<img " %}
+{% for image in images %}
+  {% if image contains 'src' %}
 
-        	    <p class="title">{{post.title}}</p>
+      {% if foundImage == 0 %}
+          {% assign html = image | split:"/>" | first %}
+          <img {{ html }} class="post"/>
+          {% assign foundImage = 1 %}
+      {% endif %}
+  {% endif %}
+{% endfor %}
+
+
         		<a href="{{post.url}}">View case study</a>
 
             </div>

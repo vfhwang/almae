@@ -12,6 +12,7 @@ function placeImage(x, y) {
   const img = document.createElement("img")
   img.setAttribute("src", nextSrc)
   img.setAttribute("draggable", "false")
+  img.classList.add("stamp")
 
   console.log(scrollTop)
 
@@ -28,7 +29,7 @@ function placeImage(x, y) {
 }
 
 document.addEventListener("click", function (event) {
-  event.preventDefault()
+  // event.preventDefault()
   placeImage(event.pageX, event.pageY)
 })
 
