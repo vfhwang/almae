@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>{{site.title}}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,19 +21,27 @@
 
         <div class="stamparea">
             <header>
-                <h1>Alice Mae Mayall</h1>
+              <a href="/"><h1>Alice Mae Mayall</h1></a>
                 <p>Stamps, illustrations and animations</p>
             </header>
-        <h2>&#8595; Work</h2>
         </div>
 
         <div class="barba-container">
+
 
 
 <div class="mainbody">
 
 {{page.title}}
 {{content}}
+
+{% for post in site.categories.projects %}
+  <a href="{{post.url}}">
+    <div class="projectitem">
+      <h3>{{post.title}}</h3>
+    </div>
+  </a>
+{% endfor %}
 
 </div>
 

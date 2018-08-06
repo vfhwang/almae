@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>{{site.title}}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,43 +19,35 @@
     <body>
       <div id="barba-wrapper">
 
+        <header>
+          <a href="/"><h1>Alice Mae Mayall</h1></a>
+            <p>Stamps, illustrations and animations</p>
+        </header>
+                    <h2>&#8595; Work</h2>
         <div class="stamparea">
-            <header>
-                <h1>Alice Mae Mayall</h1>
-                <p>Stamps, illustrations and animations</p>
-            </header>
-        <h2>&#8595; Work</h2>
+
+
+
         </div>
 
         <div class="barba-container">
 
+          <div class="stamparea">
+          <h2>&#8595; Work</h2>
+        </div>
 
-<div class="mainbody">
+
+<div class="mainbody home">
 
 
-        	  {% for post in site.categories.projects %}
-                <div class="projectitem">
-                    {% assign foundImage = 0 %}
-{% assign images = post.content | split:"<img " %}
-{% assign foundImage = 0 %}
-{% assign images = post.content | split:"<img " %}
-{% for image in images %}
-  {% if image contains 'src' %}
-
-      {% if foundImage == 0 %}
-          {% assign html = image | split:"/>" | first %}
-          <img {{ html }}/>
-          {% assign foundImage = 1 %}
-      {% endif %}
-  {% endif %}
+  {% for post in site.categories.projects %}
+    <a href="{{post.url}}">
+      <div class="projectitem">
+        <h3>{{post.title}}</h3>
+      </div>
+    </a>
 {% endfor %}
-<div class="projectdesc">
-  <a href="{{post.url}}"><h3 class="title">{{post.title}}</h3></a>
-  <p class="desc">{{post.description}}</p>
 </div>
-</div>
-{% endfor %}
-
 </div>
 
 </div>
