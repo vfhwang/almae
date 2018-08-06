@@ -23,15 +23,16 @@
                 <h1>Alice Mae Mayall</h1>
                 <p>Stamps, illustrations and animations</p>
             </header>
-
+        <h2>&#8595; Work</h2>
         </div>
 
+
+
 <div class="mainbody">
-        <h2>Work</h2>
+
 
         	  {% for post in site.categories.projects %}
                 <div class="projectitem">
-                    <h3>{{post.title}}</h3>
                     {% assign foundImage = 0 %}
 {% assign images = post.content | split:"<img " %}
 {% assign foundImage = 0 %}
@@ -41,17 +42,17 @@
 
       {% if foundImage == 0 %}
           {% assign html = image | split:"/>" | first %}
-          <img {{ html }} class="post"/>
+          <img {{ html }}/>
           {% assign foundImage = 1 %}
       {% endif %}
   {% endif %}
 {% endfor %}
-
-
-        		<a href="{{post.url}}">View case study</a>
-
-            </div>
-        	  {% endfor %}
+<div class="projectdesc">
+  <a href="{{post.url}}"><h3 class="title">{{post.title}}</h3></a>
+  <p class="desc">{{post.description}}</p>
+</div>
+</div>
+{% endfor %}
 
 </div>
 
