@@ -96,13 +96,35 @@ function placeImage(x, y) {
   }
 }
 
+function fadeHelper(){
+  var fadeTarget = document.getElementById("helpericon");
+var fadeEffect = setInterval(function () {
+    if (!fadeTarget.style.opacity) {
+        fadeTarget.style.opacity = 1;
+    }
+    if (fadeTarget.style.opacity > 0) {
+        fadeTarget.style.opacity -= 0.1;
+    } else {
+        clearInterval(fadeEffect);
+    }
+}, 50);
+}
+
 
 document.addEventListener("click", function (event) {
   // event.preventDefault()
   placeImage(event.pageX, event.pageY)
+  fadeHelper()
 })
 
 document.addEventListener("touchstart", function (event) {
   // event.preventDefault()
   placeImage(event.pageX, event.pageY)
+  fadeHelper()
 })
+
+
+
+document.addEventListener("scroll", function (event) {
+console.log("scroll!")
+});

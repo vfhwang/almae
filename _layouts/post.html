@@ -19,11 +19,13 @@
     <body>
       <div id="barba-wrapper">
 
-        <div class="stamparea">
             <header>
               <a href="/"><h1>Alice Mae Mayall</h1></a>
                 <p>Stamps, illustrations and animations</p>
             </header>
+
+            <div class="stamparea">
+
         </div>
 
         <div class="barba-container">
@@ -31,17 +33,30 @@
 
 
 <div class="mainbody">
-
-{{page.title}}
+<div class="postbody">
 {{content}}
-
+</div>
+<div class="projectitem tag">
+  <h3>&rarr; More projects</h3>
+</div>
 {% for post in site.categories.projects %}
+  {% if post.url != page.url %}
   <a href="{{post.url}}">
     <div class="projectitem">
       <h3>{{post.title}}</h3>
     </div>
   </a>
+  {% endif %}
 {% endfor %}
+
+
+<!-- {% for post in site.categories.projects %}
+  <a href="{{post.url}}">
+    <div class="projectitem">
+      <h3>{{post.title}}</h3>
+    </div>
+  </a>
+{% endfor %} -->
 
 </div>
 
