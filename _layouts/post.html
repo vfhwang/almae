@@ -32,29 +32,8 @@
 
 <div class="mainbody">
 
-
-        	  {% for post in site.categories.projects %}
-                <div class="projectitem">
-                    {% assign foundImage = 0 %}
-{% assign images = post.content | split:"<img " %}
-{% assign foundImage = 0 %}
-{% assign images = post.content | split:"<img " %}
-{% for image in images %}
-  {% if image contains 'src' %}
-
-      {% if foundImage == 0 %}
-          {% assign html = image | split:"/>" | first %}
-          <img {{ html }}/>
-          {% assign foundImage = 1 %}
-      {% endif %}
-  {% endif %}
-{% endfor %}
-<div class="projectdesc">
-  <a href="{{post.url}}"><h3 class="title">{{post.title}}</h3></a>
-  <p class="desc">{{post.description}}</p>
-</div>
-</div>
-{% endfor %}
+{{page.title}}
+{{content}}
 
 </div>
 

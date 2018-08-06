@@ -7,7 +7,7 @@
     font-family: 'Akzidenz';
     src: url('/fonts/AkzidenzGroteskBQ-BoldExt.woff2') format('woff2'),
         url('/fonts/AkzidenzGroteskBQ-BoldExt.woff') format('woff');
-    font-weight: bold;
+    font-weight: 800;
     font-style: normal;
 }
 
@@ -15,10 +15,32 @@
     font-family: 'Akzidenz';
     src: url('/fonts/AkzidenzGroteskBQ-Medium.woff2') format('woff2'),
         url('/fonts/AkzidenzGroteskBQ-Medium.woff') format('woff');
-    font-weight: 400;
+    font-weight: bold;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Akzidenz';
+    src: url('/fonts/AkzidenzGroteskBQ-Light.woff2') format('woff2'),
+        url('/fonts/AkzidenzGroteskBQ-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Optima';
+    src: url('/fonts/Optima.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Optima';
+    src: url('/fonts/Optima-Bold.woff') format('woff'),
+    src: url('/fonts/Optima-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
 
 
 html, body, div, span, applet, object, iframe,
@@ -65,27 +87,27 @@ table {
 	border-spacing: 0;
 }
 
-/* END RESET
-*/
-
 div {
   box-sizing: border-box;
 }
 
 
+/* END RESET
+*/
+
 
 body{
 	font-family:'Akzidenz', Arial;
 	background:#F5F5F5;
-	color:#4B4C55;
+	color:#4D538C;
 }
 
 h1, h2{
 	font-family:'Optima';
+  font-weight:bold;
 	font-size:3vw;
-	font-weight: bold;
-	letter-spacing: -.1vw;
-	line-height: 0.9;
+	/* letter-spacing: -.1vw; */
+	line-height: 1.2;
 }
 
 .stamparea{
@@ -114,7 +136,8 @@ h1, h2{
 img.stamp{
 	position:fixed;
 	z-index:-1;
-	width:50vw;
+	/* transform: scale(50%); */
+	height:50vh;
 }
 
 header{

@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function (e) {
+  Barba.Pjax.start()
+})
+
+//
+
+
+
 const images = [
   "birds-stamp.png"
 ]
@@ -5,7 +13,7 @@ const images = [
 let i = 0
 
 function placeImage(x, y) {
-  const nextSrc = "uploads/stamps/" + images[i]
+  const nextSrc = "/uploads/stamps/" + images[i]
   console.log(nextSrc)
 
   var scrollTop = window.pageYOffset
