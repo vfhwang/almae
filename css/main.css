@@ -123,7 +123,7 @@ h1, h2{
 	line-height: 1.2;
 }
 
-.stamparea{
+/* .stamparea{
 	width:100vw;
 	height:100vh;
 	position:fixed;
@@ -131,12 +131,20 @@ h1, h2{
 	left:0;
 	z-index:-2;
 	cursor:crosshair;
-}
+} */
 
 .worktag{
   position: fixed;
   bottom:30px;
   left:30px;
+}
+
+.contactlink{
+  color:#4D538C;
+  font-family: 'optima';
+  position: fixed;
+  top:30px;
+  right:30px;
 }
 
 .stamparea h2{
@@ -148,12 +156,10 @@ h1, h2{
 .mainbody{
   position:relative;
   z-index:999;
-	width:90vw;
 	margin:300px 30px 30px;
 }
 
 .mainbody.home{
-  width:100vw;
   margin:100vh 0 0;
   padding:30px 30px 0;
   /* background-color: #ffffff; */

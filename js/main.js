@@ -133,3 +133,8 @@ document.addEventListener("touchstart", function (event) {
 document.addEventListener("scroll", function (event) {
 console.log("scroll!")
 });
+
+
+$('.worklink').click( function(e) {e.preventDefault();
+  $('html, body').animate({scrollTop : $(document).height()},800);
+  return false; } );
