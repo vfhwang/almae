@@ -28,6 +28,9 @@ fields:
   config:
     required: true
   hidden: false
+- type: file
+  label: Images
+  name: images
 pages:
 - _posts/2018-08-09-eat-it-in-season.md
 - _posts/2018-08-03-politicians.md
