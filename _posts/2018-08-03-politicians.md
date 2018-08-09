@@ -7,8 +7,15 @@ description: Rubber stamp illustrations of todays strange world leaders
 
 
 ---
+
 ![](/uploads/almae1.jpeg)
 
+
 ## Politicians
+
+Rubber stamp illustrations of todays strange world leaders
+
+Rubber stamp illustrations of todays strange world leaders
+
 
 Rubber stamp illustrations of todays strange world leaders
