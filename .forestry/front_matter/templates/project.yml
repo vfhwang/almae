@@ -28,9 +28,9 @@ fields:
   config:
     required: true
   hidden: false
-- type: file
-  label: Images
+- type: image_gallery
   name: images
+  label: images
 pages:
 - _posts/2018-08-09-eat-it-in-season.md
 - _posts/2018-08-03-politicians.md
