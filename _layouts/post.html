@@ -36,7 +36,14 @@
 
 <div class="mainbody">
 <div class="postbody">
+<div class="posttext">
 {{content}}
+</div>
+<div class="postimages">
+{% for image in page.images %}
+<img src="{{image}}">
+{% endfor %}
+</div>
 </div>
 <div class="projectitem tag">
   <h3>&rarr; More projects</h3>
