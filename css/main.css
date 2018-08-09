@@ -207,6 +207,7 @@ a h1{
   margin-bottom:30px;
   overflow:auto;
   font-size:4vw;
+  min-height: 80vh;
 }
 
 .postbody img{
