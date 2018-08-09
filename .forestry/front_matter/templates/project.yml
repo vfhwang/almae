@@ -29,5 +29,5 @@ fields:
     required: true
   hidden: false
 pages:
-- _posts/eat-it-in-season.md
+- _posts/2018-08-09-eat-it-in-season.md
 - _posts/2018-08-03-politicians.md
