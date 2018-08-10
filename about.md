@@ -1,9 +1,12 @@
 ---
-layout: post
+layout: about
 title: About
 permalink: /about/
+
 ---
 
+<!-- images:
+- "/uploads/contact-image-almae.png" -->
 
 <a href="mailto:alicemaemayall@gmail.com">alicemaemayall@gmail.com</a>
 

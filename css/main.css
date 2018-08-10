@@ -104,80 +104,60 @@ body{
 
 header{
   position:fixed;
-  top:0;
-  left:0;
+  top:20px;
+  left:20px;
   z-index: 2;
-  margin:30px;
+  font-size: 18px;
+  color:#9395A7;
   }
 
   header p{
-  	color:#9395A7;
-  	font-size:2.5vw;
+    max-width:75%;
   }
 
-h1, h2{
+h1, h2, .contactlink{
 	font-family:'Optima';
   font-weight:bold;
-	font-size:3vw;
-	/* letter-spacing: -.1vw; */
+	font-size:24px;
 	line-height: 1.2;
 }
 
-/* .stamparea{
-	width:100vw;
-	height:100vh;
-	position:fixed;
-	top:0;
-	left:0;
-	z-index:-2;
-	cursor:crosshair;
-} */
-
 .worktag{
   position: fixed;
-  bottom:30px;
-  left:30px;
+  bottom:20px;
+  left:20px;
 }
 
 .contactlink{
-  color:#4D538C;
-  font-family: 'optima';
   position: fixed;
-  top:30px;
-  right:30px;
-}
-
-.stamparea h2{
-	position:fixed;
-	bottom:30px;
-	left:30px;
+  top:20px;
+  right:20px;
 }
 
 .mainbody{
   position:relative;
   z-index:999;
-	margin:300px 30px 30px;
+	margin:300px 20px 20px;
 }
 
 .mainbody.home{
   margin:100vh 0 0;
-  padding:30px 30px 0;
-  /* background-color: #ffffff; */
+  padding:20px 20px 0;
 }
 
 img.stamp{
 	position:fixed;
 	z-index:-1;
-	/* transform: scale(50%); */
-	width:60vw;
+	width:400px;
 }
 
 .projectitem{
   font-family: 'optima';
-  border: 10px solid #4D538C;
-  margin:0 20px 20px 0;
-  padding:20px;
-  font-size:4vw;
+  /* font-weight: bold; */
+  border: 6px solid #4D538C;
+  margin:0 10px 10px 0;
+  padding:15px;
+  font-size:36px;
   display:inline-block;
   background-color: #ffffff;
 }
@@ -197,48 +177,47 @@ a:visited{
 	text-decoration: none;
 }
 
-a h1{
-  color:#4D538C;
-}
-
 .postbody{
   background-color: #ffffff;
-  padding:30px;
-  margin-bottom:30px;
+  padding:20px;
+  margin-bottom:20px;
   overflow:auto;
-  font-size:4vw;
+  font-size:24px;
   min-height: 40vh;
   display:grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-gap: 30px;
+  grid-gap: 20px;
 }
 
 .posttext{
-  grid-column: 1 / span 1;
+  grid-row:1;
+  line-height: 1.2;
 
 }
 
 .postimages{
-  grid-column: 2 / span 1;
+  grid-row:2
 }
 
 .postimages img{
   max-width:100%;
-  margin-bottom:30px;
+  margin-bottom:20px;
+  float:right;
 }
+
 .postbody p{
   margin-bottom:24px;
-  line-height: 1.2;
-  grid-row: 2;
 }
 
 .postbody h2{
-  font-size:8vw;
-  /* width:50%; */
+  font-size:48px;
   line-height: 0.9;
-  grid-column: 1 / span 1;
   margin-bottom:30px;
+}
 
+
+.postbody.about{
+  background-color: #4D538C;
+  color:#ffffff;
 }
 
 .shieldethyoureyes{
@@ -256,4 +235,98 @@ a h1{
   left:50%;
   width:30px;
   transform: translate(-50%, -50%);
+}
+
+
+@media only screen and (min-width: 600px) {
+
+  header{
+    top:30px;
+    left:30px;
+    font-size:30px;
+    }
+
+    header p{
+      max-width:none
+    }
+
+    h1, h2, .contactlink{
+    	font-size:36px;
+    }
+
+    .worktag{
+      bottom:30px;
+      left:30px;
+    }
+
+    .contactlink{
+      position: fixed;
+      top:30px;
+      right:30px;
+    }
+
+    .mainbody{
+      position:relative;
+      z-index:999;
+    	margin:300px 30px 30px;
+    }
+
+    .mainbody.home{
+      margin:100vh 0 0;
+      padding:30px 30px 0;
+    }
+
+    img.stamp{
+    	width:600px;
+    }
+
+    .projectitem{
+      border: 8px solid #4D538C;
+      margin:0 20px 20px 0;
+      padding:20px;
+      font-size:48px;
+    }
+
+    .postbody{
+      padding:30px;
+      margin-bottom:30px;
+      font-size:36px;
+    }
+
+    .postimages img{
+      max-width:100%;
+      margin-bottom:30px;
+      float:right;
+    }
+
+    .postbody p{
+      margin-bottom:36px;
+    }
+
+    .postbody h2{
+      font-size:66px;
+      line-height: 0.9;
+      margin-bottom:30px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+
+      .postbody{
+        grid-template-columns: 1fr 1.5fr;
+        grid-gap: 30px;
+      }
+
+      .posttext{
+        grid-column: 1 / span 1;
+        grid-row:1;
+      }
+
+      .postimages{
+        grid-column: 2 / span 1;
+        grid-row:1;
+      }
+
+
 }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{site.title}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+        <meta name="robots" content="noindex" />
+    </head>
+    <body>
+      <div id="barba-wrapper">
+
+            <header>
+              <a href="/"><h1>Alice Mae Mayall</h1></a>
+                <p>Stamps, illustrations and animations</p>
+                <a href="/about"><p class="contactlink">Get in touch</p></a>
+
+            </header>
+
+            <div class="stamparea">
+
+        </div>
+
+        <div class="barba-container">
+
+
+
+<div class="mainbody">
+<div class="postbody">
+<div class="posttext">
+{{content}}
+</div>
+<div class="postimages">
+{% for image in page.images %}
+<img src="{{image}}">
+{% endfor %}
+</div>
+</div>
+<div class="projectitem tag">
+  <h3>&rarr; View projects</h3>
+</div>
+{% for post in site.categories.projects %}
+  {% if post.url != page.url %}
+  <a href="{{post.url}}">
+    <div class="projectitem">
+      <h3>{{post.title}}</h3>
+    </div>
+  </a>
+  {% endif %}
+{% endfor %}
+
+
+<!-- {% for post in site.categories.projects %}
+  <a href="{{post.url}}">
+    <div class="projectitem">
+      <h3>{{post.title}}</h3>
+    </div>
+  </a>
+{% endfor %} -->
+
+</div>
+
+</div>
+</div>
+
+{% include scripts.html %}
+    </body>
+</html>
