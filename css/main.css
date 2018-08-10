@@ -215,19 +215,6 @@ a:visited{
 }
 
 
-.postbody.about{
-  background-color: #4D538C;
-  color:#ffffff;
-}
-
-.shieldethyoureyes{
-  position:fixed;
-  width:100%;
-  height:100px;
-  bottom:-100px;
-  left:0;
-  background-color: #ffffff;
-}
 
 #helpericon{
   position:fixed;

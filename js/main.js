@@ -72,7 +72,8 @@ Barba.Pjax.getTransition = function() {
 
 
 const images = [
-  "birds-stamp.png"
+  "birds-stamp.png",
+  "trump-stamp.png"
 ]
 
 let i = 0
