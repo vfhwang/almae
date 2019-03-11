@@ -1,55 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{site.title}}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{{ site.title }}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/main.css" />
 
-        <meta name="robots" content="noindex" />
-    </head>
-    <body>
-      <div id="barba-wrapper">
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <div id="barba-wrapper">
+      <header>
+        <a href="/"><h1>Alice-Mae Mayall</h1></a>
+        <!-- <a href="/about"><p class="contactlink">Contact</p></a> -->
+      </header>
 
-        <header>
-          <a href="/"><h1>Alice Mae Mayall</h1></a>
-            <p>Stamps, illustrations and animations</p>
-            <a href="/about"><p class="contactlink">Get in touch</p></a>
-        </header>
+      <!-- <div class="stamparea"> -->
+      <img id="helpericon" src="/uploads/hand.png" />
+      <!-- </div> -->
 
+      <div class="barba-container">
+        <a href="#" class="worklink"
+          ><h2 class="worktag">
+            I make stamps, illustrations and animations <br />
+            ↓
+            <!-- &#8595; -->
+          </h2></a
+        >
 
-        <!-- <div class="stamparea"> -->
-        <img id="helpericon" src="/uploads/hand.png">
-        <!-- </div> -->
-
-        <div class="barba-container">
-
-          <a href="#" class="worklink"><h2 class="worktag">&#8595; Work</h2></a>
-
-
-<div class="mainbody home">
-
-
-  {% for post in site.categories.projects %}
-    <a href="{{post.url}}">
-      <div class="projectitem">
-        <h3>{{post.title}}</h3>
+        <div class="mainbody home">
+          {% for post in site.categories.projects %}
+          <a href="{{ post.url }}">
+            <div class="projectitem">
+              <img src="{{ post.images[0] }}" />
+              <h3 class="projecttitle">{{ post.title }}</h3>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
       </div>
-    </a>
-{% endfor %}
-</div>
-</div>
-
-</div>
-<div class="shieldethyoureyes"></div>
-{% include scripts.html %}
-    </body>
+    </div>
+    <div class="shieldethyoureyes"></div>
+    {% include scripts.html %}
+  </body>
 </html>
