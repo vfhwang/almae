@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   Barba.Pjax.start();
 });
 
-
-WE WANT TO SCROLL MAINCONTAINER TO 200PX, WHILE FADE OUT CONTENT AND FADE IN NEW CONTENT WHENEVER A NEW PAGE IS LOADED. 
+// WE WANT TO SCROLL MAINCONTAINER TO 200PX, WHILE FADE OUT CONTENT AND FADE IN NEW CONTENT WHENEVER A NEW PAGE IS LOADED.
 
 // var FadeTransition = Barba.BaseTransition.extend({
 //   start: function() {
