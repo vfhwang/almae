@@ -9,6 +9,4 @@ images:
 - "/uploads/almae3.jpeg"
 
 ---
-## Eat it in season
-
 Promoting seasonal UK grown vegetables. Rubber Stamp and letterpress A3 poster.
