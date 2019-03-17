@@ -24,28 +24,26 @@
         </a>
         <!-- <a href="/about"><p class="contactlink">Contact</p></a> -->
       </header>
-      
+
       <!-- <div class="stamparea"> -->
       <img id="helpericon" src="/uploads/hand.png" />
       <!-- </div> -->
-      
-      <div class="barba-container">
-        <a href="#" class="worklink">
-          <h2 class="worktag">
-            I make stamps, illustrations and animations <br />
-            ↓
-            <!-- &#8595; -->
-          </h2>
-        </a>
+
+      <a href="#" class="worklink">
+        <h2 class="worktag">
+          I make stamps, illustrations and animations <br />
+          ↓
+          <!-- &#8595; -->
+        </h2>
+      </a>
 
       <div class="stamparea"></div>
-
       <div class="barba-container">
         <div class="mainbody">
           <div class="postbody">
-                        <div class="posttitle">
-                        <h2> {{ page.title }}</h2>
-                        </div>
+            <div class="posttitle">
+              <h2>{{ page.title }}</h2>
+            </div>
             <div class="postimages">
               {% for image in page.images %}
               <img src="{{ image }}" />
@@ -55,17 +53,19 @@
               {{ content }}
             </div>
           </div>
-          <div class="projectitem tag">
-            <h3>&rarr; More projects</h3>
+          <div class="moreprojects">
+            <h3 class="moreprojectstitle">More projects</h3>
           </div>
           {% for post in site.categories.projects %} {% if post.url != page.url
           %}
           <a href="{{ post.url }}">
             <div class="projectitem">
-              <h3>{{ post.title }}</h3>
+              <img class="secondary" src="{{ post.images[0] }}" />
+              <h3 class="projecttitle">{{ post.title }}</h3>
             </div>
           </a>
           {% endif %} {% endfor %}
+          </div>
 
           <!-- {% for post in site.categories.projects %}
   <a href="{{post.url}}">
@@ -77,7 +77,6 @@
         </div>
       </div>
     </div>
-
     {% include scripts.html %}
   </body>
 </html>

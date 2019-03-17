@@ -162,7 +162,7 @@ div {
 body {
   font-family: "Akzidenz", Arial;
   background: #ffffff;
-  color: #828282;
+  color: #000;
 }
 
 header {
@@ -174,7 +174,7 @@ header {
   right: 0;
   z-index: 2;
   font-size: 18px;
-  color: #9395a7;
+  color: #000;
 }
 
 h1,
@@ -182,6 +182,8 @@ h2 {
   font-family: "Akzidenz";
   font-weight: 500;
   line-height: 1.2;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }
 
 h1 {
@@ -212,7 +214,8 @@ h2 {
   text-align: center;
   padding: 40px 20px 100px;
   background-color: #ffffff;
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); */
+  border-top: 1px solid black;
 }
 
 .mainbody.home {
@@ -227,7 +230,9 @@ img {
 img.stamp {
   position: fixed;
   z-index: -1;
-  width: 400px;
+  max-width: initial;
+  max-height: initial;
+  /* width: 400px; */
 }
 
 .projectitem {
@@ -239,22 +244,34 @@ img.stamp {
   background-color: #ffffff;
 }
 
+.projectitem img {
+  border: 1px black solid;
+}
+.secondary {
+  max-width: 35vw;
+  max-height: 35vh;
+}
+.moreprojectstitle {
+  font-size: 36px;
+}
+
 .projecttitle {
   margin: 30px;
 }
 
-.tag {
-  background-color: #828282;
-  color: #ffffff;
+.moreprojects {
+  text-align: center;
+  border-top: 1px solid black;
+  padding: 40px;
 }
 
 a {
-  color: #828282;
+  color: #000;
   text-decoration: none;
 }
 
 a:visited {
-  color: #828282;
+  color: #000;
   text-decoration: none;
 }
 

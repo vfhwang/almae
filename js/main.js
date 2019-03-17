@@ -4,79 +4,80 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 // WE WANT TO SCROLL MAINCONTAINER TO 200PX, WHILE FADE OUT CONTENT AND FADE IN NEW CONTENT WHENEVER A NEW PAGE IS LOADED.
 
-// var FadeTransition = Barba.BaseTransition.extend({
-//   start: function() {
-//     $("html, body").animate({ scrollTop: 0 }, 800);
+var FadeTransition = Barba.BaseTransition.extend({
+  start: function() {
+    console.log("runming scorlly!");
 
-//     /**
-//      * This function is automatically called as soon the Transition starts
-//      * this.newContainerLoading is a Promise for the loading of the new container
-//      * (Barba.js also comes with an handy Promise polyfill!)
-//      */
+    // document.body.scrollTop = document.documentElement.scrollTop = 0;
+    $("html, body").animate({ scrollTop: 0 }, 200);
 
-//     // As soon the loading is finished and the old page is faded out, let's fade the new page
-//     Promise.all([this.newContainerLoading, this.fadeOut()]).then(
-//       this.fadeIn.bind(this)
-//     );
-//   },
+    /**
+     * This function is automatically called as soon the Transition starts
+     * this.newContainerLoading is a Promise for the loading of the new container
+     * (Barba.js also comes with an handy Promise polyfill!)
+     */
 
-//   fadeOut: function() {
-//     /**
-//      * this.oldContainer is the HTMLElement of the old Container
-//      */
+    // As soon the loading is finished and the old page is faded out, let's fade the new page
+    Promise.all([this.newContainerLoading, this.fadeOut()]).then(
+      this.fadeIn.bind(this)
+    );
+  },
 
-//     return $(this.oldContainer)
-//       .animate({ opacity: "0", bottom: "-200px" })
-//       .promise();
-//   },
+  fadeOut: function() {
+    /**
+     * this.oldContainer is the HTMLElement of the old Container
+     */
 
-//   fadeIn: function() {
-//     /**
-//      * this.newContainer is the HTMLElement of the new Container
-//      * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-//      * Please note, newContainer is available just after newContainerLoading is resolved!
-//      */
+    return $(this.oldContainer)
+      .animate({ opacity: "1", top: "0px" })
+      .promise();
+  },
 
-//     var _this = this;
-//     var $el = $(this.newContainer);
+  fadeIn: function() {
+    /**
+     * this.newContainer is the HTMLElement of the new Container
+     * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+     * Please note, newContainer is available just after newContainerLoading is resolved!
+     */
 
-//     $(this.oldContainer).hide();
+    var _this = this;
+    var $el = $(this.newContainer);
 
-//     $el.css({
-//       visibility: "visible",
-//       opacity: 0
-//     });
+    $(this.oldContainer).hide();
 
-//     $el.animate({ opacity: 1 }, 400, function() {
-//       /**
-//        * Do not forget to call .done() as soon your transition is finished!
-//        * .done() will automatically remove from the DOM the old Container
-//        */
+    $el.css({
+      visibility: "visible",
+      opacity: 0
+    });
 
-//       _this.done();
-//     });
-//   }
-// });
+    $el.animate({ opacity: 1 }, 400, function() {
+      /**
+       * Do not forget to call .done() as soon your transition is finished!
+       * .done() will automatically remove from the DOM the old Container
+       */
 
-// /**
-//  * Next step, you have to tell Barba to use the new Transition
-//  */
+      _this.done();
+    });
+  }
+});
 
-// Barba.Pjax.getTransition = function() {
-//   /**
-//    * Here you can use your own logic!
-//    * For example you can use different Transition based on the current page or link...
-//    */
+/**
+ * Next step, you have to tell Barba to use the new Transition
+ */
 
-//   return FadeTransition;
-// };
+Barba.Pjax.getTransition = function() {
+  /**
+   * Here you can use your own logic!
+   * For example you can use different Transition based on the current page or link...
+   */
 
-const images = ["birds-stamp.png", "trump-stamp.png"];
+  return FadeTransition;
+};
 
-let i = 0;
+let i = 1;
 
 function placeImage(x, y) {
-  const nextSrc = "/uploads/stamps/" + images[i];
+  const nextSrc = "/uploads/stamps/stamp-" + [getRandomInt(1, 66)] + ".png";
   console.log(nextSrc);
 
   var scrollTop = window.pageYOffset;
@@ -96,10 +97,18 @@ function placeImage(x, y) {
 
   document.body.appendChild(img);
 
-  i = i + 1;
-  if (i >= images.length) {
-    i = 0;
-  }
+  // console.log(getRandomInt(1, 66));
+
+  // i = i + 1;
+  // if (i >= 65) {
+  //   i = 1;
+  // }
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
 function fadeHelper() {

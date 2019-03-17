@@ -4,9 +4,9 @@ categories: projects
 layout: post
 date: 2018-08-09 00:00:00 +0000
 images:
-- "/uploads/almae3.jpeg"
-- "/uploads/almae3.jpeg"
-- "/uploads/almae3.jpeg"
-
+  - "/uploads/almae3.jpeg"
+  - "/uploads/almae3.jpeg"
+  - "/uploads/almae3.jpeg"
 ---
+
 Promoting seasonal UK grown vegetables. Rubber Stamp and letterpress A3 poster.

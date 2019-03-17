@@ -27,24 +27,26 @@
       <img id="helpericon" src="/uploads/hand.png" />
       <!-- </div> -->
 
+      <a href="#" class="worklink"
+        ><h2 class="worktag">
+          I make stamps, illustrations and animations <br />
+          ↓
+          <!-- &#8595; -->
+        </h2></a
+      >
       <div class="barba-container">
-        <a href="#" class="worklink"
-          ><h2 class="worktag">
-            I make stamps, illustrations and animations <br />
-            ↓
-            <!-- &#8595; -->
-          </h2></a
-        >
-
-        <div class="mainbody home">
-          {% for post in site.categories.projects %}
-          <a href="{{ post.url }}">
-            <div class="projectitem">
-              <img src="{{ post.images[0] }}" />
-              <h3 class="projecttitle">{{ post.title }}</h3>
-            </div>
-          </a>
-          {% endfor %}
+      <div class="mainbody home">
+        <!-- <div class="barba-container"> -->
+          <!-- <div class="postbody"> -->
+            {% for post in site.categories.projects %}
+            <a href="{{ post.url }}">
+              <div class="projectitem">
+                <img src="{{ post.images[0] }}" />
+                <h3 class="projecttitle">{{ post.title }}</h3>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
