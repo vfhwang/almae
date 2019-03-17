@@ -112,17 +112,19 @@ function getRandomInt(min, max) {
 }
 
 function fadeHelper() {
-  var fadeTarget = document.getElementById("helpericon");
-  var fadeEffect = setInterval(function() {
-    if (!fadeTarget.style.opacity) {
-      fadeTarget.style.opacity = 1;
+  var el = document.getElementById("helpericon");
+  addClass([el], "hide");
+
+  function addClass(elements, className) {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      if (element.classList) {
+        element.classList.add(className);
+      } else {
+        element.className += " " + className;
+      }
     }
-    if (fadeTarget.style.opacity > 0) {
-      fadeTarget.style.opacity -= 0.1;
-    } else {
-      clearInterval(fadeEffect);
-    }
-  }, 50);
+  }
 }
 
 document.addEventListener("click", function(event) {

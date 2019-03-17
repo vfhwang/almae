@@ -252,6 +252,7 @@ img.stamp {
   max-height: 35vh;
 }
 .moreprojectstitle {
+  padding-top: 40px;
   font-size: 36px;
 }
 
@@ -280,7 +281,7 @@ a:visited {
   /* padding: 20px; */
   margin-bottom: 20px;
   overflow: auto;
-  font-size: 24px;
+  font-size: 36px;
   min-height: 40vh;
   /* display: grid;
   grid-gap: 20px; */
@@ -291,15 +292,18 @@ a:visited {
   line-height: 1.2;
 }
 
-/* .postimages {
-  grid-row: 2;
+.postimages {
+  text-align: center;
 }
 
 .postimages img {
-  max-width: 100%;
-  margin-bottom: 20px;
-  float: right;
-} */
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.imagewrapper {
+  width: 100%;
+}
 
 .postbody p {
   margin-bottom: 24px;
@@ -315,8 +319,25 @@ a:visited {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 30px;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 0 rgba(#5a99d4, 0.5);
+  -webkit-animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hide {
+  display: none;
 }
 
 @media only screen and (min-width: 600px) {
